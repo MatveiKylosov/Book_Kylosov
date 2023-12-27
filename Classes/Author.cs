@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Book_Kylosov
+namespace Book_Kylosov.Classes
 {
     public class Author
     {
