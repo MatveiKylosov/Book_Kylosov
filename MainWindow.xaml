@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Book_Kylosov"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="465" Width="810" MinHeight="465" MinWidth="810">
     <Grid>
         <Grid Margin="0,0,-0.4,0" Height="120" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
@@ -20,10 +20,19 @@
             <ComboBox x:Name="cbGenres" Margin="10.2,90,9.6,0" VerticalAlignment="Top" Grid.Column="1" SelectionChanged="SelectAuthor"/>
             <ComboBox x:Name="cbYear" Margin="10.2,90,9.6,0" VerticalAlignment="Top" Grid.Column="2" SelectionChanged="SelectAuthor"/>
         </Grid>
-        <ScrollViewer Margin="0,120,-0.4,0">
-            <StackPanel x:Name="parent">
-            </StackPanel>
-        </ScrollViewer>
+        <Grid Margin="0,120,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="45"/>
+            </Grid.RowDefinitions>
 
+            <ScrollViewer Margin="0,0,0,20">
+                <StackPanel x:Name="parent">
+                </StackPanel>
+            </ScrollViewer>
+
+            <Button Grid.Row="1" Content="Сохранить" Height="35" Width="200" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,220,0"/>
+            <Button Grid.Row="1" Content="Загрузить" Height="35" Width="200" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="220,0,0,0"/>
+        </Grid>
     </Grid>
 </Window>
